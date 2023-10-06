@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: databend-playground
+  name: databend-playground
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: databend-playground
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: databend-playground
+    spec:
+      containers:
+        - args:
+            - databend-playground
+            - --listen-addr
+            - 0.0.0.0:4000
+            - --bend-http-api
+            - http://databend-instance:8000
+            - --user
+            - databend
+            - --password
+            - databend
+          image: docker.io/psiace/databend-playground
+          name: databend-playground
+          ports:
+            - containerPort: 4000
+          resources: {}
+      restartPolicy: Always
+status: {}

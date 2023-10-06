@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -c
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: databend-instance
+  name: databend-instance
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: databend-instance
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -c
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: databend-instance
+    spec:
+      containers:
+        - env:
+            - name: AWS_ACCESS_KEY_ID
+              value: minioadmin
+            - name: AWS_S3_ENDPOINT
+              value: http://databend-minio:9000
+            - name: AWS_SECRET_ACCESS_KEY
+              value: minioadmin
+            - name: QUERY_DEFAULT_PASSWORD
+              value: databend
+            - name: QUERY_DEFAULT_USER
+              value: databend
+            - name: QUERY_STORAGE_TYPE
+              value: s3
+          image: docker.io/datafuselabs/databend:latest
+          livenessProbe:
+            exec:
+              command:
+                - curl -f localhost:8080/v1/health || exit 1
+          name: databend-instance
+          ports:
+            - containerPort: 8000
+          resources: {}
+      restartPolicy: Always
+status: {}
