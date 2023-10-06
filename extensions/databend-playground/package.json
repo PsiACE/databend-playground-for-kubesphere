@@ -1,0 +1,12 @@
+{
+  "name": "databend-playground",
+  "description": "A Modern Real-Time Data Processing &amp; Analytics DBMS with Cloud-Native Architecture",
+  "author": "Databend Labs",
+  "version": "1.0.0",
+  "homepage": "",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {}
+}
