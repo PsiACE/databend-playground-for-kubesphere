@@ -1,11 +1,35 @@
-import React from 'react';
-import styled from 'styled-components';
-
-const Wrapper = styled.h3`
-  margin: 8rem auto;
-  text-align: center;
-`;
+import React, { useState, useRef } from 'react';
+import { get } from 'lodash';
+import { Loading } from '@kubed/components';
+import { useLocalStorage } from '@kubed/hooks';
 
 export default function App() {
-  return <Wrapper>A Modern Real-Time Data Processing &amp; Analytics DBMS with Cloud-Native Architecture</Wrapper>;
+  const [loading, setLoading] = useState(true);
+
+  const FRAME_URL =
+    '/proxy/databend.playground/';
+
+  const iframeRef = useRef();
+
+  const onIframeLoad = () => {
+    const iframeDom = get(iframeRef.current, 'contentWindow.document');
+    setLoading(false);
+  };
+
+  return (
+    <>
+      {loading && <Loading className="page-loading" />}
+      <iframe
+        ref={iframeRef}
+        src={FRAME_URL}
+        width="100%"
+        height="100%"
+        style={{
+          height: 'calc(100vh - 68px)',
+          display: loading ? 'none' : 'block',
+        }}
+        onLoad={onIframeLoad}
+      />
+    </>
+  );
 }
