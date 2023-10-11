@@ -6,13 +6,11 @@ import { useLocalStorage } from '@kubed/hooks';
 export default function App() {
   const [loading, setLoading] = useState(true);
 
-  const FRAME_URL =
-    '/proxy/databend.playground/';
+  const FRAME_URL = '/proxy/databend.playground/';
 
   const iframeRef = useRef();
 
   const onIframeLoad = () => {
-    const iframeDom = get(iframeRef.current, 'contentWindow.document');
     setLoading(false);
   };
 

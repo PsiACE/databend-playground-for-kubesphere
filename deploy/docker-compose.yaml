@@ -3,12 +3,24 @@ version: '3'
 services:
   databend-minio:
     image: docker.io/minio/minio
-    command: server /data
+    command: server --console-address ":9001" /data
     ports:
       - "9000:9000"
       - "9001:9001"
     volumes:
       - ./data:/data
+  createbuckets:
+    image: minio/mc
+    depends_on:
+      - databend-minio
+    entrypoint: >
+      /bin/sh -c "
+      /usr/bin/mc config host add databendminio http://databend-minio:9000 minioadmin minioadmin;
+      /usr/bin/mc rm -r --force databendminio/databend;
+      /usr/bin/mc mb databendminio/databend;
+      /usr/bin/mc policy download databendminio/minioadmin;
+      exit 0;
+      "
   databend-instance:
     image: docker.io/datafuselabs/databend:latest
     environment:

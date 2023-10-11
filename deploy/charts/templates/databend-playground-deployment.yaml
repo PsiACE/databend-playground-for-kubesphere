@@ -29,7 +29,7 @@ spec:
             - --listen-addr
             - 0.0.0.0:4000
             - --bend-http-api
-            - http://databend-instance.default.svc:8000
+            - http://databend-instance:8000
             - --user
             - databend
             - --password

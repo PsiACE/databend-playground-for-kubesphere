@@ -27,6 +27,8 @@ spec:
       containers:
         - args:
             - server
+            - --console-address
+            - :9001
             - /data
           image: docker.io/minio/minio
           name: databend-minio
