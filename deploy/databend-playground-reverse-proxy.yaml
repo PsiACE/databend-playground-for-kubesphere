@@ -11,6 +11,6 @@ spec:
     method: '*'
     path: /proxy/databend.playground/*
   upstream:
-    url: http://databend-playground.default.svc:4000
+    url: http://databend-playground:4000
 status:
   state: Available
