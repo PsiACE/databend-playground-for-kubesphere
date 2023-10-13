@@ -34,7 +34,7 @@ spec:
             - databend
             - --password
             - databend
-          image: docker.io/psiace/databend-playground
+          image: docker.io/psiace/databend-playground:retest
           name: databend-playground
           ports:
             - containerPort: 4000
