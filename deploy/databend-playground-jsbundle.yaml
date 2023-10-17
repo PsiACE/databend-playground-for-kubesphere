@@ -1,7 +1,7 @@
 apiVersion: extensions.kubesphere.io/v1alpha1
 kind: JSBundle
 metadata:
-  name: v1alpha1.employee.kubesphere.io
+  name: v1alpha1.databend-playground.kubesphere.io
 spec:
   rawFrom:
     url: http://databend-playground-frontend.default.svc/dist/databend-playground-frontend/index.js
