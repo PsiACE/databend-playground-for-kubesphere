@@ -1,10 +1,10 @@
 apiVersion: extensions.kubesphere.io/v1alpha1
 kind: JSBundle
 metadata:
-  name: v1alpha1.databend-playground.kubesphere.io
+  name: v1alpha1.databend-playground-ksext-frontend.kubesphere.io
 spec:
   rawFrom:
-    url: http://databend-playground-frontend.default.svc/dist/databend-playground-frontend/index.js
+    url: http://databend-playground-ksext-frontend.default.svc/dist/databend-playground-frontend/index.js
 status:
   state: Available
-  link: /dist/databend-playground-frontend/index.js
+  link: /dist/databend-playground-ksext-frontend/index.js
