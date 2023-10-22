@@ -1,7 +1,13 @@
 apiVersion: extensions.kubesphere.io/v1alpha1
 kind: JSBundle
 metadata:
-  name: v1alpha1.databend-playground-frontend.kubesphere.io
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: databend-playground
+  name: databend-playground
 spec:
   rawFrom:
     url: http://databend-playground-frontend.default.svc/dist/databend-playground-frontend/index.js

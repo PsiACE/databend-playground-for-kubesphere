@@ -1,7 +1,13 @@
 apiVersion: extensions.kubesphere.io/v1alpha1
 kind: ReverseProxy
 metadata:
-  name: databend.playground
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: databend-playground
+  name: databend-playground
 spec:
   directives:
     headerUp:
