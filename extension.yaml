@@ -1,0 +1,53 @@
+apiVersion: kubesphere.io/v1alpha1
+name: databend-playground
+version: 0.1.0
+displayName:
+  zh: Databend Playground
+  en: Databend Playground
+description:
+  zh: Databend Playground 为 Databend 提供一站式的部署、运维和查询可视化方案。
+  en: Databend Playground provides a one-stop solution for deployment, operation, and query visualization of Databend.
+category: database
+keywords:
+  - database
+  - olap
+  - datawarehouse
+  - lakehouse
+home: https://databend.rs
+sources:
+  - https://github.com/datafuselabs/databend
+kubeVersion: ">=1.19.0"
+ksVersion: ">=4.0.0-alpha"
+maintainers:
+  - name: "Databend Labs"
+    email: "hi@datafuselabs.com"
+    url: "https://databend.rs"
+provider:
+  en:
+    name: "Databend Labs"
+    email: "hi@datafuselabs.com"
+    url: "https://databend.rs"
+icon: ./static/favicon.svg
+screenshots:
+  - ./static/screenshots/screenshot.png
+# dependencies:
+#   - name: frontend
+#     tags:
+#     - extension
+#   - name: backend
+#     tags:
+#     - agent
+# installationMode describes how to install subcharts, it can be HostOnly or Multicluster.
+# In Multicluster mode, the subchart with tag `extension` will only be deployed to the host cluster,
+# and the subchart with tag `agent` will be deployed to all selected clusters.
+installationMode: HostOnly
+# external dependencies example
+#externalDependencies:
+#  - name: a
+#    type: extension
+#    version: ">= 2.6.0"
+#    required: true
+#  - name: b
+#    type: extension
+#    version: ">= 2.2.0"
+#    required: true
