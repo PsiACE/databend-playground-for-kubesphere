@@ -1,0 +1,11 @@
+apiVersion: v1
+name: minio
+description: MinIO of Databend Playground Extension.
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+home: https://min.io/
+sources:
+  - https://github.com/minio/minio
+annotations:
+  extensions.kubesphere.io/databend-playground: minio

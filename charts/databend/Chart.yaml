@@ -1,0 +1,11 @@
+apiVersion: v1
+name: databend
+description: Databend of Databend Playground Extension.
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+home: https://databend.rs
+sources:
+  - https://github.com/datafuselabs/databend
+annotations:
+  extensions.kubesphere.io/databend-playground: databend

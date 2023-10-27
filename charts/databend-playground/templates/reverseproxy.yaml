@@ -1,0 +1,16 @@
+apiVersion: extensions.kubesphere.io/v1alpha1
+kind: ReverseProxy
+metadata:
+  name: databend.playground
+spec:
+  directives:
+    headerUp:
+    - -Authorization
+    stripPathPrefix: /proxy/databend.playground
+  matcher:
+    method: '*'
+    path: /proxy/databend.playground/*
+  upstream:
+    url: http://databend-playground.default.svc:4000
+status:
+  state: Available
