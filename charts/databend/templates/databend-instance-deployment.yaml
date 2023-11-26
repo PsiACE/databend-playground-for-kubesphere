@@ -37,7 +37,7 @@ spec:
               value: databend
             - name: QUERY_STORAGE_TYPE
               value: s3
-          image: docker.io/datafuselabs/databend:latest
+          image: docker.io/datafuselabs/databend:v1.2.180-nightly
           livenessProbe:
             exec:
               command:
