@@ -1,0 +1,7 @@
+apiVersion: v2
+name: databend-playground-extension-ui
+description: Frontend of databend-playground extension.
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+home: https://databend.rs
