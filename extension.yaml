@@ -16,8 +16,8 @@ keywords:
 home: https://databend.rs
 sources:
   - https://github.com/datafuselabs/databend
-kubeVersion: ">=1.19.0"
-ksVersion: ">=4.0.0-alpha"
+kubeVersion: ">=1.19.0-0"
+ksVersion: ">=4.0.0-0"
 maintainers:
   - name: "Databend Labs"
     email: "hi@datafuselabs.com"
