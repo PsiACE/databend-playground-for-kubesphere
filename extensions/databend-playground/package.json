@@ -1,9 +1,9 @@
 {
   "name": "databend-playground",
-  "description": "A Modern Real-Time Data Processing &amp; Analytics DBMS with Cloud-Native Architecture",
+  "description": "Databend Playground provides a one-stop solution for deployment, operation, and query visualization of Databend.",
   "author": "Databend Labs",
   "version": "1.0.0",
-  "homepage": "",
+  "homepage": "https://databend.rs",
   "main": "dist/index.js",
   "files": [
     "dist"

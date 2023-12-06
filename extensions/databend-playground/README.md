@@ -1,5 +1,3 @@
 # databend-playground
 
-A Modern Real-Time Data Processing &amp; Analytics DBMS with Cloud-Native Architecture
-
-> TODO: README
+Databend Playground provides a one-stop solution for deployment, operation, and query visualization of Databend.

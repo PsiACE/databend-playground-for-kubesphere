@@ -1,13 +1,13 @@
-import routes from './routes';
 import locales from './locales';
+import routes from './routes';
 
-const menu = {
-  parent: 'topbar',
+const menu = { 
+  parent: 'global',
   name: 'databend-playground',
   title: 'Databend Playground',
   icon: 'cluster',
   order: 0,
-  desc: 'A Modern Real-Time Data Processing &amp; Analytics DBMS with Cloud-Native Architecture',
+  desc: 'Databend Playground provides a one-stop solution for deployment, operation, and query visualization of Databend.',
   skipAuth: true,
 };
 
@@ -18,3 +18,5 @@ const extensionConfig = {
 };
 
 globals.context.registerExtension(extensionConfig);
+
+export {};
