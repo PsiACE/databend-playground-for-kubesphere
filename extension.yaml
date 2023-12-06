@@ -30,6 +30,8 @@ provider:
 icon: ./static/favicon.svg
 screenshots:
   - ./static/screenshots/screenshot.png
+  - ./static/screenshots/screenshot-autocomplete.png
+  - ./static/screenshots/screenshot-datatype.png
 # dependencies:
 #   - name: frontend
 #     tags:
