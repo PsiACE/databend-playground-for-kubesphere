@@ -6,7 +6,7 @@ Databend Playground（社区尝鲜版）默认提供 Databend 社区版的全部
 
 ## 如何使用 Databend Playground ？
 
-安装此拓展组件后，打开 **扩展组件** 点击 **Databend Playground** 即可使用。 
+安装此拓展组件后，打开 **扩展组件** 点击 **Databend Playground** 即可使用。 相关文档请访问此链接查看 [Databend Playground 中文使用手册](https://github.com/datafuse-extras/databend-playground-for-kubesphere/blob/main/docs/0.1.0/USER_MANUAL_zh.md)。
 
 ### FAQ
 

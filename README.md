@@ -8,6 +8,8 @@ Databend Playground (Community Preview) provides the full functionality of the D
 
 After installing this extension, open the **Extension** menu and click on **Databend Playground** to start using it.
 
+Please visit this link to view the relevant documents: [Databend Playground User Manual](https://github.com/datafuse-extras/databend-playground-for-kubesphere/blob/main/docs/0.1.0/USER_MANUAL.md).
+
 ### FAQ
 
 #### What features are supported in the Databend Playground (Community Preview)?
