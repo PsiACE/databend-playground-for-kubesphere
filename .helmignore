@@ -4,3 +4,4 @@ configs/
 .gitignore
 .git/
 docs/
+*.tgz
